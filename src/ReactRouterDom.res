@@ -102,3 +102,8 @@ module Location = {
   @module("react-router-dom")
   external useLocation: unit => t = "useLocation"
 }
+
+module Outlet = {
+  @module("react-router-dom") @react.component
+  external make: unit => React.element = "Outlet"
+}
