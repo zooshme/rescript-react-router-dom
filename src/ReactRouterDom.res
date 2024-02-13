@@ -15,7 +15,7 @@ module Route = {
 
   module Component = {
     @module("react-router-dom") @react.component
-    external make: (~path: string, ~element: React.element) => React.element = "Route"
+    external make: (~path: string, ~element: React.element, ~children: option<React.element>) => React.element = "Route"
   }
 }
 
