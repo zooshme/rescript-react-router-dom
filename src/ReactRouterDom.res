@@ -6,13 +6,13 @@ type route = {
 module Root = {}
 
 module Route = {
-  type t = {
+  type rec t = {
     path: string,
     element: React.element,
-    children: option<React.element>,
+    children: array<t>,
   }
 
-  let make = (~path, ~element, ~children: option<React.element>) => {path, element, children}
+  let make = (~path, ~element, ~children: array<t>) => {path, element, children}
 
   module Component = {
     @module("react-router-dom") @react.component
