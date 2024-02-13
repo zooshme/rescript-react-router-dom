@@ -9,10 +9,10 @@ module Route = {
   type t = {
     path: string,
     element: React.element,
-    children?: React.element,
+    children: option<React.element>,
   }
 
-  let make = (~path, ~element, ~children: React.element=?) => {path, element, children}
+  let make = (~path, ~element, ~children: option<React.element>) => {path, element, children}
 
   module Component = {
     @module("react-router-dom") @react.component
